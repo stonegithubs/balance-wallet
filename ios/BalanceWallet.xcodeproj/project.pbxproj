@@ -49,6 +49,7 @@
 		396C4BA42EEC4D0985CEBB42 /* SF-Pro-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA887652F27F43869229AD50 /* SF-Pro-Text-SemiboldItalic.otf */; };
 		3C363E14D5DE4A028E43EA38 /* SF-Pro-Display-UltralightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = DCA738BE00E04734AEDA2F07 /* SF-Pro-Display-UltralightItalic.otf */; };
 		3C41C1415A994234A0FF2589 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 233322FCDC624F6FA60C4B52 /* SF-Pro-Text-Heavy.otf */; };
+		3C9A2C6E21FB80F500B6FCB9 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9A2C6D21FB80F500B6FCB9 /* File.swift */; };
 		3CE916E621A8BF0200BF6B5E /* libBNFPiwik.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE916A421A8BED500BF6B5E /* libBNFPiwik.a */; };
 		3CE916EA21A8BFAC00BF6B5E /* piwiktracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CE916E721A8BFAC00BF6B5E /* piwiktracker.xcdatamodeld */; };
 		4013198EBD3D4D6F8052D25E /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9DF45B9EB38D4E8FA18A04C6 /* SF-Pro-Display-Light.otf */; };
@@ -70,6 +71,7 @@
 		7F911FD5E35D4FD99D48A61D /* libSRSRadialGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA917DDE3314475BABEC117 /* libSRSRadialGradient.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		872630C5E4CA448D8DDC783E /* Graphik-Extralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93D62D49D9CA46F292BD9869 /* Graphik-Extralight.otf */; };
+		88917E4386AA4BF19E978DB9 /* libWatermelonDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E48341357E46E699A72B33 /* libWatermelonDB.a */; };
 		8B7F7FDAB33B4D119E087D57 /* Graphik-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A7F0978B24BA4EC283C580D9 /* Graphik-SemiboldItalic.otf */; };
 		8FB4C0E7FE3240F2B2D23CE2 /* SFMono-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8789D635428240B5ABF282EE /* SFMono-Bold.otf */; };
 		91959ACCE81B4C128AAC8154 /* libRNSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B98C0A69B3614C65B194BC68 /* libRNSVG.a */; };
@@ -435,6 +437,13 @@
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RNFirebase;
 		};
+		3CB4EF1721FB7DCC002900AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A153AE37F6DE43B7A8D7743B /* WatermelonDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6E660D5E213BCCD300189354;
+			remoteInfo = WatermelonDB;
+		};
 		3CD4E8CC216989E8000FA5BD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 137BEEE47D2E4F7AB452C0BD /* SRSRadialGradient.xcodeproj */;
@@ -640,6 +649,8 @@
 		3A7E5E09E14B4EA4B52CC6EE /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = "<group>"; };
 		3C379D5D20FD1F92009AF81F /* BalanceWallet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = BalanceWallet.entitlements; path = BalanceWallet/BalanceWallet.entitlements; sourceTree = "<group>"; };
 		3C39C266218BBE66004C763F /* FastImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FastImage.xcodeproj; path = "../node_modules/react-native-fast-image/ios/FastImage.xcodeproj"; sourceTree = "<group>"; };
+		3C9A2C6C21FB80F400B6FCB9 /* BalanceWallet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BalanceWallet-Bridging-Header.h"; sourceTree = "<group>"; };
+		3C9A2C6D21FB80F500B6FCB9 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		3CE850D5210FEA8F00672599 /* libGoogleToolboxForMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleToolboxForMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE850D7210FEACE00672599 /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE9169F21A8BED500BF6B5E /* BNFPiwik.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BNFPiwik.xcodeproj; path = "../node_modules/react-native-matomo/ios/BNFPiwik.xcodeproj"; sourceTree = "<group>"; };
@@ -675,6 +686,7 @@
 		8AC83A50CE8F4EE782376063 /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = BVLinearGradient.xcodeproj; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; };
 		8C38066021DF4A73845E4A0F /* libRNRandomBytes.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNRandomBytes.a; sourceTree = "<group>"; };
 		8D37634EBB294EC79081DFD2 /* SF-Pro-Display-Heavy.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-Heavy.otf"; path = "../src/assets/fonts/SF-Pro-Display-Heavy.otf"; sourceTree = "<group>"; };
+		90E48341357E46E699A72B33 /* libWatermelonDB.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libWatermelonDB.a; sourceTree = "<group>"; };
 		9165B952731E4502857CC0B4 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-Regular.otf"; path = "../src/assets/fonts/SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		93D62D49D9CA46F292BD9869 /* Graphik-Extralight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Graphik-Extralight.otf"; path = "../src/assets/fonts/Graphik-Extralight.otf"; sourceTree = "<group>"; };
 		944CF612F0304DF281E33B66 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Text-Regular.otf"; path = "../src/assets/fonts/SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
@@ -685,6 +697,7 @@
 		9DF45B9EB38D4E8FA18A04C6 /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-Light.otf"; path = "../src/assets/fonts/SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
 		9E0A11D8843045ECB80C6AB8 /* libTouchID.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libTouchID.a; sourceTree = "<group>"; };
 		A014AE1645874354A732EB35 /* libToolTipMenu.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libToolTipMenu.a; sourceTree = "<group>"; };
+		A153AE37F6DE43B7A8D7743B /* WatermelonDB.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = WatermelonDB.xcodeproj; path = "../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB.xcodeproj"; sourceTree = "<group>"; };
 		A6EEFE6EA9354456B0DB4520 /* Graphik-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Graphik-Regular.otf"; path = "../src/assets/fonts/Graphik-Regular.otf"; sourceTree = "<group>"; };
 		A7F0978B24BA4EC283C580D9 /* Graphik-SemiboldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Graphik-SemiboldItalic.otf"; path = "../src/assets/fonts/Graphik-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		A8AE8DE50B9544B6BC186E6C /* SF-Pro-Display-BlackItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Pro-Display-BlackItalic.otf"; path = "../src/assets/fonts/SF-Pro-Display-BlackItalic.otf"; sourceTree = "<group>"; };
@@ -773,6 +786,7 @@
 				F4E8A17A670147F4A5EC177E /* libRNGestureHandler.a in Frameworks */,
 				ECF14FECD39C459D86EDCB82 /* libCodePush.a in Frameworks */,
 				F35098D973414A09939FB3F8 /* libz.tbd in Frameworks */,
+				88917E4386AA4BF19E978DB9 /* libWatermelonDB.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -931,6 +945,7 @@
 				C349494D40704C079F21BD3B /* libRNFirebase.a */,
 				3A7E5E09E14B4EA4B52CC6EE /* libRNGestureHandler.a */,
 				22E39434CDDE4C54848FBFD5 /* libCodePush.a */,
+				90E48341357E46E699A72B33 /* libWatermelonDB.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -1130,6 +1145,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		3CB4EF1421FB7DCC002900AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CB4EF1821FB7DCC002900AE /* libWatermelonDB.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		3CE916A021A8BED500BF6B5E /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -1192,6 +1215,7 @@
 				3759782F486D4A9C80CC99F5 /* RNFirebase.xcodeproj */,
 				171CDF49E32841EDA7D557DB /* RNGestureHandler.xcodeproj */,
 				4A9E14039D3A4590A2F32D92 /* CodePush.xcodeproj */,
+				A153AE37F6DE43B7A8D7743B /* WatermelonDB.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1208,6 +1232,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				3C9A2C6D21FB80F500B6FCB9 /* File.swift */,
 				13B07FAE1A68108700A75B9A /* BalanceWallet */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* BalanceWalletTests */,
@@ -1216,6 +1241,7 @@
 				DCAC1D8CC45E468FBB7E1395 /* Resources */,
 				24979D1220F83E3D007EB0DA /* Recovered References */,
 				300D0A66230DE0210033DFA9 /* Pods */,
+				3C9A2C6C21FB80F400B6FCB9 /* BalanceWallet-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -1358,6 +1384,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = Q4G66XSS36;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -1510,6 +1537,10 @@
 				{
 					ProductGroup = 24979D5820F83E3E007EB0DA /* Products */;
 					ProjectRef = 46EFC4C16BAF4873BE45393E /* UdpSockets.xcodeproj */;
+				},
+				{
+					ProductGroup = 3CB4EF1421FB7DCC002900AE /* Products */;
+					ProjectRef = A153AE37F6DE43B7A8D7743B /* WatermelonDB.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1843,6 +1874,13 @@
 			remoteRef = 3C63E308210FD58100CD471C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		3CB4EF1821FB7DCC002900AE /* libWatermelonDB.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libWatermelonDB.a;
+			remoteRef = 3CB4EF1721FB7DCC002900AE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		3CD4E8CD216989E8000FA5BD /* libSRSRadialGradien-tvOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -2122,6 +2160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CE916EA21A8BFAC00BF6B5E /* piwiktracker.xcdatamodeld in Sources */,
+				3C9A2C6E21FB80F500B6FCB9 /* File.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -2153,6 +2192,7 @@
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = Q4G66XSS36;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -2181,12 +2221,14 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
 					"$(SRCROOT)/../node_modules/@ledgerhq/react-native-passcode-auth",
+					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
 				);
 				INFOPLIST_FILE = BalanceWalletTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -2201,6 +2243,7 @@
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = Q4G66XSS36;
@@ -2226,12 +2269,14 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
 					"$(SRCROOT)/../node_modules/@ledgerhq/react-native-passcode-auth",
+					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
 				);
 				INFOPLIST_FILE = BalanceWalletTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -2248,6 +2293,7 @@
 			baseConfigurationReference = FC66276043513D02FCEDDA58 /* Pods-BalanceWallet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = BalanceWallet/BalanceWallet.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -2281,6 +2327,7 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-code-push/ios/**",
 					"$(SRCROOT)/../node_modules/@ledgerhq/react-native-passcode-auth",
+					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
 				);
 				INFOPLIST_FILE = BalanceWallet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2293,6 +2340,9 @@
 				PRODUCT_NAME = BalanceWallet;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BalanceWallet-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -2302,6 +2352,7 @@
 			baseConfigurationReference = 432859DCCD05A1435434FB50 /* Pods-BalanceWallet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODEPUSH_KEY = "rRRp2wVm2zME6qpn0ncR7CAV5QCD343992b2-2d60-469e-9628-dfd37746ec1a";
 				CODE_SIGN_ENTITLEMENTS = BalanceWallet/BalanceWallet.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2335,6 +2386,7 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-code-push/ios/**",
 					"$(SRCROOT)/../node_modules/@ledgerhq/react-native-passcode-auth",
+					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
 				);
 				INFOPLIST_FILE = BalanceWallet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2347,6 +2399,8 @@
 				PRODUCT_NAME = BalanceWallet;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BalanceWallet-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -2393,6 +2447,7 @@
 			baseConfigurationReference = 4BC4C815AED5E011A9F31474 /* Pods-BalanceWallet.staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODEPUSH_KEY = "kVkoMqwPWFwoeBl7Uubt8X8NZlpL343992b2-2d60-469e-9628-dfd37746ec1a";
 				CODE_SIGN_ENTITLEMENTS = BalanceWallet/BalanceWallet.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2424,6 +2479,7 @@
 					"$(SRCROOT)/../node_modules/react-native-haptic-feedback/ios",
 					"$(SRCROOT)/../node_modules/react-native-code-push/ios/**",
 					"$(SRCROOT)/../node_modules/@ledgerhq/react-native-passcode-auth",
+					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
 				);
 				INFOPLIST_FILE = BalanceWallet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2436,6 +2492,8 @@
 				PRODUCT_NAME = BalanceWallet;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BalanceWallet-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Staging;
@@ -2443,6 +2501,7 @@
 		2C6A799921127ED9003AFB37 /* Staging */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = Q4G66XSS36;
@@ -2466,12 +2525,14 @@
 					"$(SRCROOT)/../node_modules/react-native-haptic-feedback/ios",
 					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
 					"$(SRCROOT)/../node_modules/@ledgerhq/react-native-passcode-auth",
+					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
 				);
 				INFOPLIST_FILE = BalanceWalletTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -2526,6 +2587,7 @@
 			baseConfigurationReference = ED304EFD46FA36DC3BD61D3D /* Pods-BalanceWallet.localrelease.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODEPUSH_KEY = "rRRp2wVm2zME6qpn0ncR7CAV5QCD343992b2-2d60-469e-9628-dfd37746ec1a";
 				CODE_SIGN_ENTITLEMENTS = BalanceWallet/BalanceWallet.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2559,6 +2621,7 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-code-push/ios/**",
 					"$(SRCROOT)/../node_modules/@ledgerhq/react-native-passcode-auth",
+					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
 				);
 				INFOPLIST_FILE = BalanceWallet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2571,6 +2634,8 @@
 				PRODUCT_NAME = BalanceWallet;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BalanceWallet-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = LocalRelease;
@@ -2578,6 +2643,7 @@
 		2C87B79B2197FA1900682EC4 /* LocalRelease */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = Q4G66XSS36;
@@ -2603,12 +2669,14 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
 					"$(SRCROOT)/../node_modules/@ledgerhq/react-native-passcode-auth",
+					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
 				);
 				INFOPLIST_FILE = BalanceWalletTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (

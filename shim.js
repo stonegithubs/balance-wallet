@@ -1,5 +1,23 @@
+import { Database } from '@nozbe/watermelondb';
+import SQLiteAdapter from '@nozbe/watermelondb/adapters/sqlite';
 import { AsyncStorage } from 'react-native';
 import Storage from 'react-native-storage';
+import schema from './src/model/schema';
+import Transaction from './src/model/Transaction';
+
+const adapter = new SQLiteAdapter({
+  schema,
+});
+
+const database = new Database({
+  adapter,
+  modelClasses: [
+    Transaction,
+  ],
+  actionsEnabled: true,
+});
+
+global.database = database;
 
 const storage = new Storage({
   size: 1000,
