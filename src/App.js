@@ -5,6 +5,7 @@ import {
   settingsUpdateAccountAddress,
 } from 'balance-common';
 import { get, isEmpty } from 'lodash';
+import DatabaseProvider from '@nozbe/watermelondb/DatabaseProvider'
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Piwik from 'react-native-matomo';
@@ -16,6 +17,7 @@ import { connect, Provider } from 'react-redux';
 import { compose, withProps } from 'recompact';
 import { FlexItem } from './components/layout';
 import OfflineBadge from './components/OfflineBadge';
+
 import {
   withTrackingDate,
   withWalletConnectConnections,
@@ -190,15 +192,17 @@ class App extends Component {
   }
 
   render = () => (
-    <Provider store={store}>
-      <FlexItem>
-        <OfflineBadge />
-        <Routes
-          ref={this.handleNavigatorRef}
-          screenProps={{ handleWalletConfig: this.handleWalletConfig }}
-        />
-      </FlexItem>
-    </Provider>
+    <DatabaseProvider database={database}>
+      <Provider store={store}>
+        <FlexItem>
+          <OfflineBadge />
+          <Routes
+            ref={this.handleNavigatorRef}
+            screenProps={{ handleWalletConfig: this.handleWalletConfig }}
+          />
+        </FlexItem>
+      </Provider>
+    </DatabaseProvider>
   )
 }
 

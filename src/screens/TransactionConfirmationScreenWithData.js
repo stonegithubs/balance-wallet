@@ -16,7 +16,7 @@ class TransactionConfirmationScreenWithData extends Component {
     navigation: PropTypes.any,
     removeTransaction: PropTypes.func,
     transactionCountNonce: PropTypes.number,
-    transactionsAddNewTransaction: PropTypes.func,
+    addNewTransaction: PropTypes.func,
     updateTransactionCountNonce: PropTypes.func,
     walletConnectors: PropTypes.object,
   }
@@ -73,7 +73,7 @@ class TransactionConfirmationScreenWithData extends Component {
         to: get(transactionDetails, 'transactionDisplayDetails.payload.to'),
         value: get(transactionDetails, 'transactionDisplayDetails.payload.value'),
       };
-      this.props.transactionsAddNewTransaction(txDetails);
+      this.props.addNewTransaction(txDetails);
       this.props.removeTransaction(transactionDetails.callId);
       const walletConnector = this.props.walletConnectors[transactionDetails.sessionId];
       await walletConnectSendStatus(walletConnector, transactionDetails.callId, transactionHash);

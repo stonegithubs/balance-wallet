@@ -1,25 +1,19 @@
-import { connect } from 'react-redux';
 import { compose, withProps } from 'recompact';
 import { createSelector } from 'reselect';
+import withObservables from '@nozbe/with-observables';
+import { withDatabase } from '@nozbe/watermelondb/DatabaseProvider';
 
 const transactionsSelector = state => state.transactions;
-
-const mapStateToProps = ({
-  transactions: {
-    hasPendingTransaction,
-    transactions,
-  },
-}) => ({
-  hasPendingTransaction,
-  transactions,
-});
 
 const transactionsCountSelector = createSelector(
   [ transactionsSelector ],
   (transactions) => ({ transactionsCount: transactions.length }),
 );
 
-export default Component => compose(
-  connect(mapStateToProps),
+export default Component => withDatabase(withObservables([], ({ database }) => ({
+      transactions: database.collections.get('transactions').query().observe(),
+  }))(compose(
   withProps(transactionsCountSelector),
-)(Component);
+)(Component))
+
+);

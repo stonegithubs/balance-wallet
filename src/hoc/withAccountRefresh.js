@@ -8,6 +8,7 @@ export default Component => compose(
   withHandlers({
     refreshAccount: (ownProps) => async () => {
       try {
+        // TODO need to add address and network
         ownProps.transactionsRefreshState();
         await ownProps.assetsRefreshState();
       } catch (error) {

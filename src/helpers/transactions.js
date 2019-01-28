@@ -44,10 +44,9 @@ export const getTransactionStatus = ({
   return undefined;
 };
 
-const groupTransactionByDate = ({ pending, timestamp: time }) => {
+const groupTransactionByDate = ({ pending, timestamp: ms }) => {
   if (pending) return 'Pending';
 
-  const { ms } = time;
   const timestamp = new Date(parseInt(ms, 10));
 
   if (isToday(timestamp)) return 'Today';
@@ -60,19 +59,34 @@ const groupTransactionByDate = ({ pending, timestamp: time }) => {
 const normalizeTransactions = ({ accountAddress, nativeCurrency, transactions }) =>
   transactions.map(({
     asset,
+    error,
+    hash,
+    from,
     native,
+    pending,
+    timestamp,
+    to,
+    txFee,
     value,
-    ...tx
   }) => ({
-    ...tx,
+    error,
+    hash,
     balance: value,
     name: get(asset, 'name'),
     native: {
       ...supportedNativeCurrencies[nativeCurrency],
       balance: get(native, `${nativeCurrency}.value`),
     },
-    status: getTransactionStatus({ accountAddress, ...tx }),
+    status: getTransactionStatus({
+      accountAddress,
+      error,
+      from,
+      pending,
+      to
+    }),
     symbol: get(asset, 'symbol'),
+    timestamp,
+    txFee,
   }));
 
 const renderItemElement = renderItem => renderItemProps => createElement(renderItem, renderItemProps);

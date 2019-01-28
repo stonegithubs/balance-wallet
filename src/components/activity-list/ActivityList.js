@@ -29,7 +29,6 @@ const keyExtractor = ({ hash, timestamp, transactionDisplayDetails }) => (hash |
 const renderSectionHeader = ({ section }) => <ActivityListHeader {...section} />;
 
 const ActivityList = ({
-  hasPendingTransaction,
   header,
   nativeCurrency,
   pendingTransactionsCount,
@@ -39,7 +38,6 @@ const ActivityList = ({
   <SectionList
     contentContainerStyle={{ paddingBottom: !transactionsCount ? 0 : 40 }}
     extraData={{
-      hasPendingTransaction,
       nativeCurrency,
       pendingTransactionsCount,
     }}
@@ -55,7 +53,6 @@ const ActivityList = ({
 );
 
 ActivityList.propTypes = {
-  hasPendingTransaction: PropTypes.bool,
   header: PropTypes.node,
   nativeCurrency: PropTypes.string.isRequired,
   pendingTransactionsCount: PropTypes.number,
@@ -94,7 +91,6 @@ export default compose(
     };
   }),
   onlyUpdateForKeys([
-    'hasPendingTransaction',
     'nativeCurrency',
     'pendingTransactionsCount',
     'sections',
