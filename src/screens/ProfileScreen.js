@@ -21,7 +21,6 @@ const ProfileScreen = ({
   showBlur,
   transactions,
   transactionsCount,
-  transitionProps,
 }) => (
   <Page component={FlexItem} style={position.sizeAsObject('100%')}>
     {showBlur && (
@@ -69,7 +68,6 @@ ProfileScreen.propTypes = {
   showBlur: PropTypes.bool,
   transactions: PropTypes.array,
   transactionsCount: PropTypes.number,
-  transitionProps: PropTypes.object,
 };
 
 export default ProfileScreen;

@@ -37,7 +37,6 @@ class WalletScreen extends PureComponent {
     assetsTotal: PropTypes.object,
     blurOpacity: PropTypes.object,
     isEmpty: PropTypes.bool.isRequired,
-    isLoading: PropTypes.bool.isRequired,
     isScreenActive: PropTypes.bool,
     navigation: PropTypes.object,
     onHideSplashScreen: PropTypes.func,
@@ -47,7 +46,6 @@ class WalletScreen extends PureComponent {
     showBlur: PropTypes.bool,
     toggleShowShitcoins: PropTypes.func,
     trackingDate: PropTypes.object,
-    transitionProps: PropTypes.object,
     uniqueTokens: PropTypes.array,
     updateTrackingDate: PropTypes.func,
   }
@@ -57,9 +55,13 @@ class WalletScreen extends PureComponent {
     const { handleWalletConfig } = this.props.navigation.getScreenProps();
     await handleWalletConfig();
 
-    const showShitcoins = await getShowShitcoinsSetting();
-    if (showShitcoins !== null) {
-      this.props.toggleShowShitcoins(showShitcoins);
+    try {
+      const showShitcoins = await getShowShitcoinsSetting();
+      if (showShitcoins !== null) {
+        this.props.toggleShowShitcoins(showShitcoins);
+      }
+    } catch (error) {
+      // TODO
     }
     this.props.onHideSplashScreen();
     await this.props.refreshAccount();
@@ -95,7 +97,6 @@ class WalletScreen extends PureComponent {
     const {
       blurOpacity,
       isEmpty,
-      isLoading,
       navigation,
       onRefreshList,
       sections,
@@ -112,7 +113,6 @@ class WalletScreen extends PureComponent {
           <AssetList
             fetchData={onRefreshList}
             isEmpty={isEmpty}
-            isLoading={isLoading}
             sections={sections}
           />
         </FabWrapper>

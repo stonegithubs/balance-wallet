@@ -6,7 +6,7 @@ import { withDatabase } from '@nozbe/watermelondb/DatabaseProvider';
 const transactionsSelector = state => state.transactions;
 
 const transactionsCountSelector = createSelector(
-  [ transactionsSelector ],
+  [transactionsSelector],
   (transactions) => ({ transactionsCount: transactions.length }),
 );
 

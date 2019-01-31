@@ -9,8 +9,8 @@ export default Component => compose(
     refreshAccount: (ownProps) => async () => {
       try {
         // TODO need to add address and network
-        ownProps.transactionsRefreshState();
         await ownProps.assetsRefreshState();
+        ownProps.transactionsRefreshState();
       } catch (error) {
         // TODO more granular error messaging depending on offline status
       }
