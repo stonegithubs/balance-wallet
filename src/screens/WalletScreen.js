@@ -55,9 +55,13 @@ class WalletScreen extends PureComponent {
     const { handleWalletConfig } = this.props.navigation.getScreenProps();
     await handleWalletConfig();
 
-    const showShitcoins = await getShowShitcoinsSetting();
-    if (showShitcoins !== null) {
-      this.props.toggleShowShitcoins(showShitcoins);
+    try {
+      const showShitcoins = await getShowShitcoinsSetting();
+      if (showShitcoins !== null) {
+        this.props.toggleShowShitcoins(showShitcoins);
+      }
+    } catch (error) {
+      // TODO
     }
     this.props.onHideSplashScreen();
     await this.props.refreshAccount();
