@@ -11,7 +11,7 @@ const transactionsCountSelector = createSelector(
 );
 
 export default Component => withDatabase(withObservables([], ({ database }) => ({
-      transactions: database.collections.get('transactions').query().observe(),
+  transactions: database.collections.get('transactions').query().observe(),
   }))(compose(
   withProps(transactionsCountSelector),
 )(Component))
