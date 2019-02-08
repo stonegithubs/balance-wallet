@@ -56,8 +56,7 @@ const groupTransactionByDate = ({ pending, timestamp: ms }) => {
   return format(timestamp, `MMMM${isThisYear(timestamp) ? '' : ' YYYY'}`);
 };
 
-const normalizeTransactions = ({ accountAddress, nativeCurrency, transactions }) =>
-  transactions.map(({
+const normalizeTransactions = ({ accountAddress, nativeCurrency, transactions }) => transactions.map(({
     asset,
     error,
     hash,

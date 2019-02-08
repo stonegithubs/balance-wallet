@@ -6,7 +6,6 @@ import React, { PureComponent } from 'react';
 import Piwik from 'react-native-matomo';
 import {
   compose,
-  shouldUpdate,
   withHandlers,
   withProps,
   withState,
@@ -23,12 +22,10 @@ import {
   withAccountSettings,
   withBlurTransitionProps,
   withFetchingPrices,
-  withHideSplashScreen,
   withIsWalletEmpty,
   withTrackingDate,
 } from '../hoc';
 import { position } from '../styles';
-import { isNewValueForPath } from '../utils';
 
 class WalletScreen extends PureComponent {
   static propTypes = {
@@ -39,7 +36,6 @@ class WalletScreen extends PureComponent {
     isEmpty: PropTypes.bool.isRequired,
     isScreenActive: PropTypes.bool,
     navigation: PropTypes.object,
-    onHideSplashScreen: PropTypes.func,
     onRefreshList: PropTypes.func.isRequired,
     refreshAccount: PropTypes.func,
     sections: PropTypes.array,
@@ -51,10 +47,6 @@ class WalletScreen extends PureComponent {
   }
 
   componentDidMount = async () => {
-    // Initialize wallet
-    const { handleWalletConfig } = this.props.navigation.getScreenProps();
-    await handleWalletConfig();
-
     try {
       const showShitcoins = await getShowShitcoinsSetting();
       if (showShitcoins !== null) {
@@ -63,8 +55,6 @@ class WalletScreen extends PureComponent {
     } catch (error) {
       // TODO
     }
-    this.props.onHideSplashScreen();
-    await this.props.refreshAccount();
   }
 
   componentDidUpdate = (prevProps) => {
@@ -102,6 +92,7 @@ class WalletScreen extends PureComponent {
       sections,
       showBlur,
     } = this.props;
+
     return (
       <Page style={{ flex: 1, ...position.sizeAsObject('100%') }}>
         {showBlur && <BlurOverlay opacity={blurOpacity} />}
@@ -127,12 +118,11 @@ export default compose(
   withAccountSettings,
   withFetchingPrices,
   withTrackingDate,
-  withHideSplashScreen,
   withBlurTransitionProps,
   withIsWalletEmpty,
   withState('showShitcoins', 'toggleShowShitcoins', true),
   withHandlers({
-    onRefreshList: ({ refreshAccount }) => async () => await refreshAccount(),
+    onRefreshList: ({ refreshAccount }) => async () => refreshAccount(),
     onToggleShowShitcoins: ({ showShitcoins, toggleShowShitcoins }) => (index) => {
       if (index === 0) {
         const updatedShowShitcoinsSetting = !showShitcoins;
