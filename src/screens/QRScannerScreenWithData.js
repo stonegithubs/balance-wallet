@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import { Vibration } from 'react-native';
 import firebase from 'react-native-firebase';
 import Piwik from 'react-native-matomo';
+import { withNavigationFocus } from 'react-navigation';
 import Permissions from 'react-native-permissions';
 import { compose } from 'recompact';
 import { Alert } from '../components/alerts';
@@ -24,7 +25,7 @@ class QRScannerScreenWithData extends Component {
   static propTypes = {
     accountAddress: PropTypes.string,
     addWalletConnector: PropTypes.func,
-    isScreenActive: PropTypes.bool,
+    isFocused: PropTypes.bool,
     navigation: PropTypes.object,
     setSafeTimeout: PropTypes.func,
   }
@@ -36,7 +37,7 @@ class QRScannerScreenWithData extends Component {
   }
 
   componentDidUpdate = (prevProps, prevState) => {
-    if (this.props.isScreenActive && !prevProps.isScreenActive) {
+    if (this.props.isFocused && !prevProps.isFocused) {
       Permissions.request('camera').then(permission => {
         const isCameraAuthorized = permission === 'authorized';
 
@@ -116,16 +117,20 @@ class QRScannerScreenWithData extends Component {
     });
   }
 
-  render = () => (
-    <QRScannerScreen
-      {...this.props}
-      {...this.state}
-      enableScanning={this.state.enableScanning && this.props.isScreenActive}
-      onPressBackButton={this.handlePressBackButton}
-      onScanSuccess={this.handleScanSuccess}
-      onSheetLayout={this.handleSheetLayout}
-    />
-  )
+  render = () => {
+    const { isFocused, ...rest } = this.props;
+    return (
+      <QRScannerScreen
+        {...rest}
+        {...this.state}
+        isScreenActive={isFocused}
+        enableScanning={this.state.enableScanning && this.props.isFocused}
+        onPressBackButton={this.handlePressBackButton}
+        onScanSuccess={this.handleScanSuccess}
+        onSheetLayout={this.handleSheetLayout}
+      />
+    );
+  }
 }
 
 export default compose(
@@ -134,4 +139,5 @@ export default compose(
   withSafeTimeout,
   withWalletConnectConnections,
   withStatusBarStyle('light-content'),
+  withNavigationFocus,
 )(QRScannerScreenWithData);
